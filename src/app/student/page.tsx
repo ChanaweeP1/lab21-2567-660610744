@@ -51,7 +51,7 @@ export default function StudentPage() {
 
   const callEnrollApi = async () => {
     try {
-      const resp = await axios.post(
+       await axios.post(
         "/api/enrollments",
         {
           courseNo,
@@ -81,7 +81,7 @@ export default function StudentPage() {
   const callDropApi = async (drop_courseNo: string) => {
     setLoadingDropping(drop_courseNo);
     try {
-      const resp = await axios.delete("/api/enrollments", {
+       await axios.delete("/api/enrollments", {
         data: {
           courseNo: drop_courseNo,
         },
